@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT</title>
+</head>
+<body>
+ <div id="one"></div>
+    <script>
+     var a = 0, f = 1,txt="TEXT-GROWING",color;
+     function fun()
+     {
+      if(f==1)
+       a+=5,color="red";
+      else
+       a-=5,color="blue";
+      document.getElementById("one").innerHTML = "<h1 style=\"font-size: "+a+"px ; margin: 0px; color : "+color+"\"><b> "+txt+"</b></h1>";
+      if(a==50)
+       f = 0, txt="TEXT-SHRINKING";
+      if(a==5)
+       f = 1, txt="TEXT-GROWING";
+      c();
+     }
+     function c()
+     {
+      setTimeout(fun,300);
+     }
+     c();
+    </script>
+</body>
+</html>
